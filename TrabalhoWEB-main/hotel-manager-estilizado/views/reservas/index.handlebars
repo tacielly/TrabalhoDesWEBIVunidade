@@ -1,0 +1,19 @@
+<h2>Reservas</h2>
+<a href="/reservas/novo"><button>Nova Reserva</button></a>
+<table>
+<tr><th>Nome</th><th>Quarto</th><th>Dias</th><th>Tipo</th><th>Ações</th></tr>
+{{#each reservas}}
+<tr>
+  <td>{{this.nome}}</td>
+  <td>{{this.quarto}}</td>
+  <td>{{this.dias}}</td>
+  <td>{{this.tipo}}</td>
+  <td>
+    <a href="/reservas/editar/{{this.id}}"><button>Editar</button></a>
+    <form action="/reservas/excluir/{{this.id}}" method="POST" style="display:inline;">
+      <button type="submit">Excluir</button>
+    </form>
+  </td>
+</tr>
+{{/each}}
+</table>

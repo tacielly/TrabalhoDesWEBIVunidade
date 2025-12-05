@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {{#if reserva}}
+  <h2>Editar Reserva</h2>
+  <form action="/reservas/editar/{{reserva.id}}" method="POST" class="form-inline">
+    <input name="nome" value="{{reserva.nome}}" required>
+    <input name="quarto" value="{{reserva.quarto}}" required>
+    <input name="dias" value="{{reserva.dias}}" type="number" required>
+    <input name="tipo" value="{{reserva.tipo}}" required>
+    <button type="submit">Salvar</button>
+    <a class="btn link" href="/reservas">Cancelar</a>
+  </form>
+{{/if}}
+
+</body>
+</html>

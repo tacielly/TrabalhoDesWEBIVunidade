@@ -1,0 +1,8 @@
+<h2>Editar Reserva</h2>
+<form action="/reservas/editar/{{reserva.id}}" method="POST">
+  <label>Nome:</label><input type="text" name="nome" value="{{reserva.nome}}" required>
+  <label>Quarto:</label><input type="text" name="quarto" value="{{reserva.quarto}}" required>
+  <label>Dias:</label><input type="number" name="dias" value="{{reserva.dias}}" required>
+  <label>Tipo de quarto:</label><input type="text" name="tipo" value="{{reserva.tipo}}" required>
+  <button type="submit">Atualizar</button>
+</form>

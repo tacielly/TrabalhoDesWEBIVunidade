@@ -1,0 +1,17 @@
+<h2>Estacionamento</h2>
+<a href="/estacionamento/novo"><button>Novo Produto</button></a>
+<table>
+<tr><th>Nome</th><th>Preço</th><th>Ações</th></tr>
+{{#each estacionamento}}
+<tr>
+  <td>{{this.veiculo}}</td>
+  <td>R$ {{this.placa}}</td>
+  <td>
+    <a href="/estacionamento/editar/{{this.id}}"><button>Editar</button></a>
+    <form action="/estacionamento/excluir/{{this.id}}" method="POST" style="display:inline;">
+      <button type="submit">Excluir</button>
+    </form>
+  </td>
+</tr>
+{{/each}}
+</table>

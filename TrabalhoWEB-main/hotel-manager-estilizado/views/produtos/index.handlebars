@@ -1,0 +1,17 @@
+<h2>Produtos</h2>
+<a href="/produtos/novo"><button>Novo Produto</button></a>
+<table>
+<tr><th>Nome</th><th>Preço</th><th>Ações</th></tr>
+{{#each produtos}}
+<tr>
+  <td>{{this.nome}}</td>
+  <td>R$ {{this.preco}}</td>
+  <td>
+    <a href="/produtos/editar/{{this.id}}"><button>Editar</button></a>
+    <form action="/produtos/excluir/{{this.id}}" method="POST" style="display:inline;">
+      <button type="submit">Excluir</button>
+    </form>
+  </td>
+</tr>
+{{/each}}
+</table>

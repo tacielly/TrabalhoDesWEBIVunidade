@@ -1,0 +1,6 @@
+<h2>Editar Vaga</h2>
+<form action="/estacionamento/editar/{{estacionamento.id}}" method="POST">
+  <label>Veiculo:</label><input type="text" name="nome" value="{{estacionamento.veiculo}}" required>
+  <label>placa:</label><input type="text"  name="placa" value="{{estacionamento.placa}}" required>
+  <button type="submit">Atualizar</button>
+</form>
